@@ -68,3 +68,30 @@ Call `make` in order to build the project. Object and module files will be creat
 ## Validation and finding error bounds
 In order to validate the implementations there is the Mathematica file `misc/Lie_group_functions.nb`. It implements most of the Lie group functions.
 Finding the error bounds that are used in the module `singular_functions` is not easy. Here, the Mathematica file `misc/singular_coefficients.nb` was used. It defines a function `singAnal[f,OptionsPattern[]]`, where a function `f` can be passed. In the options pattern, the critical point, the threshold, the order to the Taylor polynomial (among other things) can be specified. Calling `singAnal` on a function will give an overview of the function near the critical value. For this, the function is evaluated as given with machine precision and with extremely high precision. Futhermore, the Taylor approximation given and is evaluated and the three are compared. The goal is to adjust the threshold and the order of the Taylor polynomial in such a way that neither the Taylor approximation is too imprecise inside the threshold nor the as-is-evaluation outside the threshold has loss of significance that is too big.
+
+## Related projects
+Integrators:
+
+ * [The Lie group generalized-α method `gena`](https://github.com/StHante/gena)
+ * [The Lie group BDF method `BLieDF`](https://github.com/StHante/BLieDF)
+ * [The Lie group RATTLE method `RATTLie`](https://github.com/StHante/RATTLie)
+ * [The Lie group SHAKE method `SHAKELie`](https://github.com/StHante/SHAKELie)
+ * [The nonholonomic RATTLie method `RATTLie_nonhol`](https://github.com/StHante/RATTLie_nonhol)
+
+Test problems:
+
+ * [The heavy top example `heavy_top`](https://github.com/StHante/heavy_top)
+ * [The constrained Cosserat beam model `crmS3R3`](https://github.com/StHante/crmS3R3)
+ * [The rolling disk example `rolling_disk`](https://github.com/StHante/rolling_disk)
+
+Miscellaneous:
+
+ * [Implementation of Lie group functions `liegroup`](https://github.com/StHante/liegroup)
+ * [Expand a config file with different configurations to several files `expandconfig`](https://github.com/StHante/expandconfig)
+ * [Read lua files in Matlab and Octave `readLua`](https://github.com/StHante/readLua-for-Matlab-and-Octave)
+
+Third party projects:
+
+ * [Reading lua files in Fortran `aotus`](https://geb.sts.nt.uni-siegen.de/doxy/aotus/)
+ * [GFortran](https://gcc.gnu.org/fortran/)
+ * [GNU Parallel](https://www.gnu.org/software/parallel/)
